@@ -112,3 +112,8 @@ python train.py
 Inside each epoch, the recent weight parameters are saved as a weight file. The number of times that the parameters to be saved is controlled by `save_interval`in `entity.py` file.
 
 More configuration about training are in the `entity.py` file.
+
+### AP&mAP
+
+The script  `cal_mAP.py` calculates the AP&mAP value of the model by invoking COCOAPI. One thing you should know is that, **the order of the keypoints used in training stages is different from the order in COCO Dataset, the original author of the referenced openpose implementation made a mapping between them.** You should remap the order of the predicted keypoints with the order of groundtruth keypoints.
+

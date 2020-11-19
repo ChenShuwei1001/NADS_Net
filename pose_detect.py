@@ -11,7 +11,6 @@ if __name__ == '__main__':
 
     # load model
     nads_net = NADS_Net_Solver(weights_file = weights_path, training = False)
-
     # read image and inference
     img = cv2.imread(arg.img)
     poses, _ = nads_net.detect(img)
