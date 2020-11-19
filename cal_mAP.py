@@ -39,6 +39,7 @@ if __name__ == '__main__':
             coordinate = [item for sublist in pose for item in sublist]
             detected_kp.append({'image_id':img_id, 'keypoints':coordinate, 'category_id':1, 'score':scores[idx]})
         print('{}/{}'.format(i, val_len))
+        i+=1
     json.dump(detected_kp, open(json_file_path, 'w'))
 
     res_file = coco_dir + 'detected_kp.json'
