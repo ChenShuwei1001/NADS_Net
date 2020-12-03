@@ -10,6 +10,8 @@ The origin code of NADS-Net is not public. Considering that the work of NADS-Net
 
 ## Attention!
 
+### Aftering training and teting on coco dataset， the mAP metric is very low，So I don't recommand you to take NADS as your applications backbone!
+
 NADS-Net is a network  with there detection head, i.e. the keypoints detection head(outputs Confidence Maps), the PAF detection head, and a seat belt segmentation head. Our application scenario is to estimate the pose of the drivers to detect and prevent possible dangerous driving behaviors. Status of seat belts matters a lot in the scenario. However, there is **EXTREMELY FEW** public datasets with seat belt labeling. Considering that, the influence of safety belt on driving pose estimation is not included in our application, i.e. we **DID NOT** implement the seat belt detection head! We only detect the pose of the driver(by only the keypoints detection head and the PAF detection head) to assess driving safety.
 
 
