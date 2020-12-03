@@ -10,7 +10,7 @@ The origin code of NADS-Net is not public. Considering that the work of NADS-Net
 
 ## Attention!
 
-### Aftering training and teting on coco dataset， the mAP metric is very low，So I don't recommand you to take NADS as your applications backbone!
+###  The model is only trained for 300,000 steps with batch_size 8. Considering that the model is not as effective as expectation, I didn't debugging and training the model any more. In summary， NADS is tend to work (slightly) better in some special application scenarios, e.g. the drinving pose in  the paper, but I don't recommand you to take NADS as your applications backbone!
 
 NADS-Net is a network  with there detection head, i.e. the keypoints detection head(outputs Confidence Maps), the PAF detection head, and a seat belt segmentation head. Our application scenario is to estimate the pose of the drivers to detect and prevent possible dangerous driving behaviors. Status of seat belts matters a lot in the scenario. However, there is **EXTREMELY FEW** public datasets with seat belt labeling. Considering that, the influence of safety belt on driving pose estimation is not included in our application, i.e. we **DID NOT** implement the seat belt detection head! We only detect the pose of the driver(by only the keypoints detection head and the PAF detection head) to assess driving safety.
 
@@ -42,7 +42,7 @@ the trained model is placed in:
 2. [one drive]()
 3. [pan baidu](https://pan.baidu.com/s/1sRzhS3EGpwNYcXpBbcEZHg) and the password: **aauu**
 
-after downloading the file **nads_model.pth**, copy it into **work_space/model/**
+after downloading the file **nads_model.pth**, copy it into **work_space/model/**. After choosing hyperparameter， the model is only trained for 300,000 steps with batch_size 8. Considering that the model is not as effective as expectation, I didn't debugging and training the model any more.
 
 
 
